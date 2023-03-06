@@ -25,6 +25,7 @@
 
 body {
   background: var(--BG-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -73,12 +74,10 @@ body * {
   transform: translateY(-50%);
 }
 
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
-  
 }
-
 
 #switch span {
   display: block;
@@ -145,4 +144,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+/*media queries*/
+
+@media (min-width: 700px) {
+  :root {
+    --BG-url: url(./assets/BG-desktop-dark_mode.jpg);
+  }
+
+  .light {
+    --BG-url: url(./assets/BG-light_mode.jpg);
+  }
 }
